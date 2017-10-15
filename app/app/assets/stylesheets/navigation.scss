@@ -1,0 +1,15 @@
+#navi {
+    text-align: right;
+    padding: 40px 0;
+    & > .container {
+        & > ul {
+            & > li {
+                display: inline-block;
+                margin-right: 10px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

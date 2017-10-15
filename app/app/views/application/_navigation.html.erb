@@ -1,0 +1,14 @@
+<nav id="navi">
+    <div class="container">
+        <ul>
+            <% if user_signed_in? %>
+                <li><a>My Room</a></li>
+                <li><a>Dashboard</a></li>
+                <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+            <% else %>
+                <li><%= link_to('Login', new_user_session_path) %></li>
+                <li><a>About</a></li>
+            <% end %>
+        </ul>
+    </div>
+</nav>

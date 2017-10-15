@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   		<!-- Basic Page Needs
+		================================================== -->
+		<meta charset="utf-8" />
+		<title>
+			Gather
+		</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Katy Morris" />
+		<meta name="description" content="" />
+
+		<!-- Mobile Specific Metas
+		================================================== -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= csrf_meta_tags %>
+
+  		<!-- STYLESHEETS
+		================================================== -->
+
+    <%= stylesheet_link_tag    'application', params[:controller], media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'main', media: 'all' %>
+
+		<!-- JAVASCRIPTS
+		================================================== -->
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "transit" %>
+
+  </head>
+
+  <body>
+    <%= render :partial => 'application/navigation' %>
+    <%= yield %>
+  </body>
+</html>
