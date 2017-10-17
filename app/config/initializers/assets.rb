@@ -24,3 +24,4 @@ Rails.application.config.assets.precompile += %w( dashboards.scss )
 #JAVASCRIPTS
 Rails.application.config.assets.precompile += %w( transit.js )
 Rails.application.config.assets.precompile += %w( spotify.js )
+Rails.application.config.assets.precompile += %w( jquery-1.2.10.min )

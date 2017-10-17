@@ -1,10 +1,41 @@
 @import 'reset';
 @import 'partials/variables';
+@import 'partials/fonts';
 @import 'navigation';
 
+// @font-face {
+//   font-family: "Asap-Regular";
+//   src: font-url("Asap-Regular.otf") format("opentype");
+// }
+
 body {
+    font-family: "Asap-Regular";
     background-color: $backgroundColor;
     color: $mainFontColor;
+}
+h1 {
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+h3 {
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+h4 {
+    font-size: 20px;
+}
+h5 {
+    font-size: 16px;
+}
+h6 {
+    font-size: 14px;
+}
+h4, h5, h6 {
+    margin-bottom: 20px;
 }
 a {
     cursor: pointer;
@@ -17,4 +48,30 @@ a {
 .container {
     width: 1170px;
     margin: 0 auto;
+}
+/*------BUTTONS------*/
+.btn {
+    cursor: pointer;
+}
+.main-btn {
+    background-color: $mainBtnColor; 
+    padding: 10px 15px;
+    font-size: 18px;
+}
+
+/*------FORMS------*/
+.form {
+    & > .field {
+        & > .label {
+            font-size: 20px;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+        & > .input {
+            font-size: 18px;
+            padding: 7px 5px;
+            margin-bottom: 20px; 
+            background: whitesmoke;
+        }
+    }
 }
