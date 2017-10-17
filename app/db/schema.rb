@@ -12,14 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20171015012330) do
 
-  create_table "rooms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "about"
-    t.string "occupation"
-    t.string "skills"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "user_profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "gender"
     t.string "about"
@@ -43,6 +35,8 @@ ActiveRecord::Schema.define(version: 20171015012330) do
     t.string "first_name"
     t.string "last_name"
     t.string "username"
+    t.string "provider"
+    t.string "uid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

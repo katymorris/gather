@@ -18,7 +18,9 @@ Rails.application.config.assets.precompile += %w( devise/sessions.scss )
 # Rails.application.config.assets.precompile += %w( navigation.scss )
 Rails.application.config.assets.precompile += %w( main.scss )
 Rails.application.config.assets.precompile += %w( rooms.scss )
+Rails.application.config.assets.precompile += %w( dashboards.scss )
 # Rails.application.config.assets.precompile += %w( reset.scss )
 
 #JAVASCRIPTS
 Rails.application.config.assets.precompile += %w( transit.js )
+Rails.application.config.assets.precompile += %w( spotify.js )
