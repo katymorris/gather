@@ -13,6 +13,13 @@ User.create(
 	last_name: "Morris",
 )
 
+User.create(
+	email: "katym@null.com",
+	password: "password",
+	first_name: "Katy",
+	last_name: "Morris",
+)
+
 50.times do 
 	User.create!(
 	  first_name: Faker::Name.first_name,

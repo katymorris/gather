@@ -17,4 +17,12 @@ class User < ApplicationRecord
       # user.skip_confirmation!
     end
   end
+  def self.search(term)
+    if term != ""
+      User.where("first_name = ?", term)
+
+    else
+      User.all
+    end
+  end
 end
