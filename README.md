@@ -2,6 +2,8 @@
 
 Make sure to run rails 5.1 and ruby 2.2.5
 
+Eventually I'll put this in a script, but for now this is how to get it started:
+
 Install Vagrant/Virtual Box 
 SSH into box:
 * -vagrant up
