@@ -5,7 +5,6 @@ export default class HelloWorld extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired, // this is passed from the Rails view
   };
-
   /**
    * @param props - Comes from your rails view.
    */

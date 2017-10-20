@@ -19,10 +19,10 @@ class User < ApplicationRecord
   end
   def self.search(term)
     if term != ""
-      User.where("first_name = ?", term)
-
+      User.where("first_name = ?", term).to_json
+      
     else
-      User.all
+      User.all.to_json
     end
   end
 end

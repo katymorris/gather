@@ -22,6 +22,8 @@ export default class UserSearch extends React.Component {
   };
 
   render() {
+    console.log('prooops')
+    console.log(this.props)
     return (
       <div>
         <h3>
