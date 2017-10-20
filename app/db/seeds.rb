@@ -6,25 +6,21 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(
-	email: "katy@null.com",
-	password: "password",
-	first_name: "Katy",
-	last_name: "Morris",
-)
 
 User.create(
 	email: "katym@null.com",
 	password: "password",
 	first_name: "Katy",
 	last_name: "Morris",
+	username: Faker::Pokemon.name
 )
 
 50.times do 
 	User.create!(
-	  first_name: Faker::Name.first_name,
-	  last_name: Faker::Name.last_name,
-	  email: Faker::Internet.email,
-	  password: "password"
+		username: Faker::Pokemon.name,
+	  	first_name: Faker::Name.first_name,
+	  	last_name: Faker::Name.last_name,
+	  	email: Faker::Internet.email,
+	  	password: "password"
 	)
 end

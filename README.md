@@ -40,11 +40,11 @@ NOW you'll install React on Rails
 Install Foreman for live changes
 * sudo apt install ruby-foreman
 
-* You can start the server using:
+You can start the server using:
 * foreman start -f Procfile.dev
-* this uses port 5000
-* or
+this uses port 5000
+or
 * rails s -b 0.0.0.0
-* this uses port 3000
+this uses port 3000
 
-* Make sure everything works by going to 192.168.33.30:3000/hello_world
+Make sure everything works by going to 192.168.33.30:3000/hello_world

@@ -21,6 +21,7 @@ export default class HelloWorld extends React.Component {
   };
 
   render() {
+    console.log('heeelllloo world')
     return (
       <div>
         <h3>
@@ -29,7 +30,7 @@ export default class HelloWorld extends React.Component {
         <hr />
         <form >
           <label htmlFor="name">
-            Say hello to:
+            Say hellooooooooo to:
           </label>
           <input
             id="name"

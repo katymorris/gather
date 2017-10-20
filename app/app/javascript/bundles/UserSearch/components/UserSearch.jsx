@@ -1,46 +1,31 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import UserBox from './UserBox'
 
 export default class UserSearch extends React.Component {
-  static propTypes = {
-    name: PropTypes.string.isRequired, // this is passed from the Rails view
-  };
+  // static propTypes = {
+  //   name: PropTypes.string.isRequired, // this is passed from the Rails view
+  // };
 
   /**
    * @param props - Comes from your rails view.
    */
+
   constructor(props) {
     super(props);
-
-    // How to set initial state in ES6 class syntax
-    // https://facebook.github.io/react/docs/reusable-components.html#es6-classes
-    this.state = { name: this.props.name };
+    this.state = { 
+      users: JSON.parse(this.props.users),
+    };
   }
 
-  updateName = (name) => {
-    this.setState({ name });
-  };
-
   render() {
-    console.log('prooops')
-    console.log(this.props)
     return (
       <div>
         <h3>
-          Hello, {this.state.name}!
+          Results
         </h3>
         <hr />
-        <form >
-          <label htmlFor="name">
-            Say hello to:
-          </label>
-          <input
-            id="name"
-            type="text"
-            value={this.state.name}
-            onChange={(e) => this.updateName(e.target.value)}
-          />
-        </form>
+          <UserBox users={this.state.users} />
       </div>
     );
   }
