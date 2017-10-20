@@ -1,16 +1,9 @@
-# README
+# Gather
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Make sure to run rails 5.1 and ruby 2.2.5
 
-Things you may want to cover:
-
-Here's what you need to get it completely up and running:
-
-* Make sure to run rails 5.1 and ruby 2.2.5
-
-* Install Vagrant/Virtual Box 
-* SSH into box:
+Install Vagrant/Virtual Box 
+SSH into box:
 * -vagrant up
 * -vagrant ssh
 * -cd ..
@@ -27,12 +20,12 @@ Here's what you need to get it completely up and running:
 * echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 * sudo apt-get update && sudo apt-get install yarn
 
-* Webpacker must be installed BEFORE React on Rails Gem
+Webpacker must be installed BEFORE React on Rails Gem
 
 * bundle exec rails webpacker:install
 * bundle 
 
-* NOW you'll install React on Rails
+NOW you'll install React on Rails
 
 * bundle exec rails webpacker:install:react
 * add gem to Gemfile - gem 'react_on_rails', '~> 9.0.1'
@@ -42,7 +35,7 @@ Here's what you need to get it completely up and running:
 * bundle
 * yarn
 
-* Install Foreman for live changes
+Install Foreman for live changes
 * sudo apt install ruby-foreman
 
 * You can start the server using:
