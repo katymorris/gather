@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import User from './User'
 
 export default class UserBox extends React.Component {
   // static propTypes = {
@@ -12,18 +11,12 @@ export default class UserBox extends React.Component {
    */
 
   render() {
-    let userArray = this.props.users;
-    let users;
-    if(userArray){
-      users = Object.keys(userArray).map(function(key, index) {
-        return (
-          <User key={userArray[key].id} user={userArray[key]} />
-        );
-      });
-    }
     return (
-      <div>
-          {users}
+      <div className="search-box">
+           <span className="avatar"></span>
+           <span className="first-name">{this.props.user.first_name}</span> 
+           <span className="last-name">{this.props.user.last_name}</span>
+           <span className="title">{this.props.user.title}</span>
       </div>
     );
   }

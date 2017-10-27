@@ -55,3 +55,6 @@ input, button, textarea {
 input:focus {
 	outline: none;
 }
+*, *:before, *:after {
+	box-sizing: border-box;
+  }

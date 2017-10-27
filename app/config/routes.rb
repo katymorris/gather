@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     authenticated :user do
-      root to: 'rooms#show'
+      root to: 'application#root'
     end
 
     unauthenticated do

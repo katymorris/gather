@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ReactOnRailsWithWebpacker</title>
+    <title>Search</title>
     <%= csrf_meta_tags %>
+    <%= render :partial => 'application/header-tags' %>
     <%= javascript_pack_tag 'user-search-bundle' %>
-  </head>
-    
+  </head>  
   <body>
+    <%= render :partial => 'application/navigation' %>
     <%= yield %>
   </body>
 </html>

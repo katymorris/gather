@@ -1,3 +1,9 @@
-<h1>Hello</h1>
-
+<div class="container" id="container-room">
+    <% if @current_user.id == @user["id"] %>
+        <span id="edit">Edit</span>
+    <% end %>
+    <h1><%= @user["first_name"] %> <%= @user["last_name"] %></h1>
+    <h2><%= @user["title"] %></h2>
+    <p><%= @profile["about"] %></p>
+</div>
 

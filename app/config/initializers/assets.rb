@@ -19,6 +19,8 @@ Rails.application.config.assets.precompile += %w( devise/sessions.scss )
 Rails.application.config.assets.precompile += %w( main.scss )
 Rails.application.config.assets.precompile += %w( rooms.scss )
 Rails.application.config.assets.precompile += %w( dashboards.scss )
+Rails.application.config.assets.precompile += %w( searches.scss )
+Rails.application.config.assets.precompile += %w( devise/registrations.scss )
 # Rails.application.config.assets.precompile += %w( reset.scss )
 
 #JAVASCRIPTS

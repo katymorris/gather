@@ -4,3 +4,12 @@
 body {
     font-size: 50px;
 }
+#container-room {
+    position: relative;
+    text-align: center;
+    & > #edit {
+        position: absolute;
+        cursor: pointer;
+        right: 50px;
+    }
+}

@@ -11,21 +11,32 @@ export default class UserSearch extends React.Component {
    * @param props - Comes from your rails view.
    */
 
-  constructor(props) {
-    super(props);
-    this.state = { 
-      users: JSON.parse(this.props.users),
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = { 
+  //     users: JSON.parse(this.props.users),
+  //   };
+  // }
 
   render() {
+    let userArray = JSON.parse(this.props.users);
+    let users = [];
+    
+    if(userArray){
+      users = Object.keys(userArray).map(function(key, index) {
+        return (
+          <UserBox key={userArray[key].id} user={userArray[key]} />
+        );
+      });
+    }
+
     return (
-      <div>
+      <div className="results-box">
         <h3>
           Results
         </h3>
         <hr />
-          <UserBox users={this.state.users} />
+          {users}
       </div>
     );
   }
