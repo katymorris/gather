@@ -1,8 +1,8 @@
 class SearchesController < ApplicationController
-    layout "search"
 
   def index
-    @users = User.search(params[:q])
+    @users = User.search(params[:q]).to_json
+    @current_user = current_user
     render template: 'searches/index' 
   end 
 

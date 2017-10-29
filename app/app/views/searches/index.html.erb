@@ -1,4 +1,9 @@
+<% content_for :javascript do %>
+    <%= javascript_tag "var curUserId = #{@current_user.id};" %>
+    <%= javascript_pack_tag 'user-search-bundle' %>
+<% end %>
 <div class="container">
     <h1>Search</h1>
-    <%= react_component("UserSearch", props: {users: @users}, prerender: false) %>
+    <h3>Results</h3>
+    <%= react_component("UserSearch", props: {users: @users, current_user_id: @current_user.id}, prerender: false) %>
 </div>

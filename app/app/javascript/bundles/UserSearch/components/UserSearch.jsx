@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import UserBox from './UserBox'
+import FilterBox from './FilterBox'
 
 export default class UserSearch extends React.Component {
   // static propTypes = {
@@ -21,22 +22,23 @@ export default class UserSearch extends React.Component {
   render() {
     let userArray = JSON.parse(this.props.users);
     let users = [];
-    
+    let curUserId = this.props.current_user_id;
     if(userArray){
       users = Object.keys(userArray).map(function(key, index) {
         return (
-          <UserBox key={userArray[key].id} user={userArray[key]} />
+          <UserBox key={userArray[key].id} user={userArray[key]} current_user_id={curUserId} />
         );
       });
     }
 
     return (
-      <div className="results-box">
-        <h3>
-          Results
-        </h3>
-        <hr />
-          {users}
+      <div className="results-box row">
+          <section id="search" className="column half">
+            {users}
+          </section>
+          <section id="filter" className="column quarter">
+            <FilterBox />
+          </section>
       </div>
     );
   }

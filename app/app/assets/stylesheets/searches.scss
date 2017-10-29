@@ -1,19 +1,29 @@
 // Place all the styles related to the searches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.results-box > .search-box > span {
-    display: inline-block;
-    vertical-align: middle;
+.results-box > #search > .search-box {
+    padding: 30px 0;
+    & span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    & .avatar {
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        border-radius: 50%;
+    }
+    & .first-name {
+        margin-left: 20px;
+    }
+    & .last-name {
+        margin-left: 5px;
+    }
+    & .add {
+        float: right;
+        clear: both;
+    }
 }
-.results-box > .search-box > .avatar {
-    height: 100px;
-    width: 100px;
-    border: 1px solid black;
-    border-radius: 50%;
-}
-.results-box > .search-box > .first-name {
-    margin-left: 20px;
-}
-.results-box > .search-box > .last-name {
-    margin-left: 5px;
+.results-box > #filter > .filter-box {
+    width: 39%;
 }

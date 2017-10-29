@@ -5,7 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
          
   has_one :user_profile
-
+  has_many :friendships
+  has_many :friends, :through => :friendships
   before_create :build_default_profile
 
     #DEFAULT BUILDS
@@ -29,26 +30,39 @@ class User < ApplicationRecord
     end
   end
 
+  #CHECK FOR FRIENDS
+  #must enter as array of users
+  def self.check_for_friends(users)
+    users.each do |user|
+
+    end
+  end
+
   #DATA GATHERING
 
     def self.search(term)
       if term != ""
-        User.where("first_name = ?", term).to_json
+        users = User.where("first_name = ?", term)
       else
-        User.all.to_json
+        users = User.all
       end
+      user_data(users)
+
     end
 
-    def self.userData(id)
-      puts id
-      puts "cool"
-      user = User.find(id)
-      userData = Hash.new
-      userData["first_name"] = user.first_name
-      userData["last_name"] = user.last_name
-      userData["username"] = user.username
-      userData["title"] = user.title
-      userData["id"] = user.id
+    #accepts either a single object or an Array and gets/sends the user's relevent
+    def self.user_data(users)
+      userData = Array.new
+      users.each do |user|
+        tempHash = Hash.new
+        tempHash["first_name"] = user.first_name
+        tempHash["last_name"] = user.last_name
+        tempHash["username"] = user.username
+        tempHash["title"] = user.title
+        tempHash["id"] = user.id
+
+        userData.push tempHash
+      end
       return userData
     end
 

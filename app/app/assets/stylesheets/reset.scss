@@ -52,7 +52,7 @@ input, button, textarea {
 	background: none;
 	border: none;
   }
-input:focus {
+input:focus, button:focus {
 	outline: none;
 }
 *, *:before, *:after {

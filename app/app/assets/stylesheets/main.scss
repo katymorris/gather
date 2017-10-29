@@ -49,6 +49,26 @@ a {
         text-decoration: none;
     }
 }
+
+/* ----FLEXBOX USE---- */
+/* COLUMNS */
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.column {
+    flex-basis: 100%;
+    flex: 1;
+}
+.quarter {
+    flex: 2.5;
+}
+.half {
+    flex: 5;
+}
+  /*-----------------------*/
+
 .container {
     width: 1170px;
     margin: 0 auto;
