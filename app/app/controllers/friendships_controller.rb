@@ -30,16 +30,14 @@ class FriendshipsController < ApplicationController
       
       respond_to do |format|
         if @friendship.save
-          puts "here"
           format.json { render :show, status: :created, location: @friendship }
         else
-          puts "not working"
           format.json { render json: @friendship.errors, status: :unprocessable_entity }
         end
       end
     else
       respond_to do |format|
-          format.json { render json: {"message": "friendship exists"},  status: :no_content  }
+          format.json { render json: {} ,  status: :no_content  }
       end
     end
   end

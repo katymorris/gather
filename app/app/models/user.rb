@@ -7,6 +7,9 @@ class User < ApplicationRecord
   has_one :user_profile
   has_many :friendships
   has_many :friends, :through => :friendships
+  has_many :friend_requests, dependent: :destroy
+  has_many :pending_friends, through: :friend_requests, source: :friend
+
   before_create :build_default_profile
 
     #DEFAULT BUILDS

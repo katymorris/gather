@@ -23,10 +23,10 @@ export default class UserBox extends React.Component {
     
   }
   handleFriendship(e) {
-    axios.post('/friendships.json', {
+    axios.post('/friend_requests.json', {
       authenticity_token: ReactOnRails.authenticityToken(),
       responseType: 'json',
-      friendship: {
+      friend_request: {
         friend_id: this.props.user.id,
         user_id: this.props.current_user_id
       }
@@ -34,9 +34,9 @@ export default class UserBox extends React.Component {
     .then(function (response) {
       console.log(response);
       if (response.status != 201) {
-        alert('You are already friends with this person.')
+        alert('You already sent a request to this person.')
       } else {
-        alert('A request has been sent')
+        alert('A request has been sent.')
       }
     })
     .catch(function (error) {
