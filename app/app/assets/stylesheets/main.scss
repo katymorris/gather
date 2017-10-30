@@ -73,15 +73,7 @@ a {
     width: 1170px;
     margin: 0 auto;
 }
-/*------FORMS------*/
-input {
-    outline: 1px solid lightgray;
-    padding: 7px;
-    font-size: $mainFontSize;
-    &:focus {
-        outline: 1px solid rgb(175, 175, 175);
-    }
-}
+
 /*------BUTTONS------*/
 .btn {
     cursor: pointer;
@@ -93,6 +85,7 @@ input {
 }
 
 /*------FORMS------*/
+
 .form {
     & > .field {
         & > .label {
@@ -105,6 +98,12 @@ input {
             padding: 7px 5px;
             margin-bottom: 20px; 
             background: whitesmoke;
+            outline: 1px solid lightgray;
+            padding: 7px;
+            font-size: $mainFontSize;
+            &:focus {
+                outline: 1px solid rgb(175, 175, 175);
+            }
         }
     }
 }

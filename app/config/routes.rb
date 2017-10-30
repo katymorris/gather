@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :notifications
   resources :friend_requests
   resources :friendships
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }

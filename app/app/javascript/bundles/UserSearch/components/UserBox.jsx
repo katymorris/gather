@@ -16,12 +16,6 @@ export default class UserBox extends React.Component {
         isFriend: false
     }
   }
-  sendFriendshipRequest() {
-
-  }
-  removeFriendshipRequest() {
-    
-  }
   handleFriendship(e) {
     axios.post('/friend_requests.json', {
       authenticity_token: ReactOnRails.authenticityToken(),
@@ -32,11 +26,31 @@ export default class UserBox extends React.Component {
       }
     })
     .then(function (response) {
-      console.log(response);
+      var friendReqResponse = response;
       if (response.status != 201) {
-        alert('You already sent a request to this person.')
+        alert('You already sent a request to this person.');
+
       } else {
-        alert('A request has been sent.')
+        alert('A request has been sent.');
+        //send notification
+        axios.post('/notifications.json', {
+          authenticity_token: ReactOnRails.authenticityToken(),
+          responseType: 'json',
+          notification: {
+            notified_by: friendReqResponse.data.user_id,
+            user_id: friendReqResponse.data.friend_id
+          },
+          notifiable_type: {
+            notifiable_type: "FriendRequest"
+          }
+        })
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+
       }
     })
     .catch(function (error) {

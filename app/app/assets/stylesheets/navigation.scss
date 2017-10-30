@@ -3,6 +3,28 @@
     padding: 40px 0;
     & > .container {
         & > ul {
+            & #notification {
+                position: relative;
+                width: 25px;
+                height: 25px;
+                background-image: url('/assets/notification.svg');
+                background-size: 25px 25px;
+                cursor: pointer;
+                & #notification-bubble {
+                    display: none;
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+                    height: 15px;
+                    width: 15px;
+                    padding: 3px;
+                    background-color: red;
+                    color: white;
+                    font-size: 10px;
+                    border-radius: 50%;
+                    box-sizing: content-box;
+                }
+            }
             & > li {
                 display: inline-block;
                 margin-right: 10px;

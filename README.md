@@ -10,7 +10,7 @@ SSH into box:
 * -vagrant ssh
 * -cd ..
 * -cd vagrant
-* -cd getty
+* -cd app
 * bundle install
 * sudo apt-get update
 * sudo apt-get install nodejs

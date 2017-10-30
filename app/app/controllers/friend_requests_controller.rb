@@ -19,10 +19,10 @@ class FriendRequestsController < ApplicationController
 
     private
     
-    def set_friend_request
-        @friend_request = FriendRequest.find(params[:id])
-    end
-    def friend_request_params
-        params.require(:friend_request).permit(:friend_id, :user_id)
-      end
+    # def set_friend_request
+    #     @friend_request = FriendRequest.find(params[:id])
+    # end
+        def friend_request_params
+            params.require(:friend_request).permit(:friend_id, :user_id)
+        end
 end
